@@ -61,3 +61,11 @@ class Credentials:
         '''
 
         return cls.credentials_list
+
+     @classmethod
+    def pass_gen(cls):
+        '''
+        function that generates a random password
+        '''
+        p_word = secrets.token_urlsafe(8)
+        return p_word
