@@ -25,3 +25,39 @@ class Credentials:
         '''
 
         Credentials.credentials_list.remove(self)
+       @classmethod
+    def find_acc(cls,account):
+        '''
+        Method that takes in an account name and returns an account that matches that name.
+
+        Args:
+            name: account name to search for
+        Returns :
+            account that matches the account name.
+        '''
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return credential
+        return False
+
+    @classmethod
+    def credential_exists(cls,account):
+        '''
+        Method that checks if an account exists from the credentials list.
+        Args:
+            name: account name to search if it exists
+        Returns :
+            Boolean: True or false depending if the account exists
+        ''' 
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return True
+        return False
+
+    @classmethod
+    def display_acc(cls):
+        '''
+        method that returns the user list
+        '''
+
+        return cls.credentials_list
