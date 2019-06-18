@@ -11,3 +11,17 @@ class Credentials:
         self.account = account
         self.u_name = u_name
         self.p_word = p_word
+
+    def save_acc(self):
+        '''
+        save_acc method that saves account objects into credentials_list
+        '''
+
+        Credentials.credentials_list.append(self)
+
+    def delete_acc(self):
+        '''
+        delete_user method deletes a saved user from the user_list
+        '''
+
+        Credentials.credentials_list.remove(self)
