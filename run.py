@@ -86,3 +86,14 @@ def display_password():
     Function that returns generated password
     '''
     return Credentials.pass_gen()
+
+def main():
+    print("Hello Welcome to your password locker. Proceed to create an account")
+    print('Input a Username of your choice')
+    usr_name = input()
+    print('Input a password of your choice')
+    pword = input() 
+    print('Input a random number as your account identifier')
+    id_num = input()
+    save_user(create_user(id_num,usr_name,pword))
+    print('\n')
