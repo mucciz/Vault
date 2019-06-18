@@ -71,3 +71,13 @@ class User:
         '''
 
         return cls.user_list
+    @classmethod
+    def auth_user(cls,user_name,password):
+        '''
+        method that authenticates user
+        '''
+
+        for user in cls.user_list:
+            if user.user_name == user_name and user.password == password:
+                return True
+        return False
