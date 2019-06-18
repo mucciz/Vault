@@ -33,3 +33,17 @@ class User:
         '''
 
         User.user_list.remove(self) 
+
+    @classmethod
+    def find_user(cls,id_number):
+        '''
+        Method that takes in an ID number and returns a user that matches that ID number.
+
+        Args:
+            number: ID number to search for
+        Returns :
+            Contact of person that matches the number.
+        '''
+        for user in cls.user_list:
+            if user.id_number == id_number:
+                return user
