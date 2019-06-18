@@ -106,4 +106,5 @@ class TestUser(unittest.TestCase):
         auth_users = User.auth_user('scooby','doo')
         self.assertTrue(auth_users)
 
-        
+if __name__== '__main__':
+    unittest.main()
