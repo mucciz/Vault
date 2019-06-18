@@ -25,7 +25,7 @@ class Credentials:
         '''
 
         Credentials.credentials_list.remove(self)
-       @classmethod
+    @classmethod
     def find_acc(cls,account):
         '''
         Method that takes in an account name and returns an account that matches that name.
@@ -62,7 +62,7 @@ class Credentials:
 
         return cls.credentials_list
 
-     @classmethod
+    @classmethod
     def pass_gen(cls):
         '''
         function that generates a random password
